@@ -1,0 +1,82 @@
+2.class Printtable {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        {
+         
+        int N = 42;
+ 
+        
+        for (int i = 1; i <= 10; i++) {
+            
+            System.out.println(42 + " * " + i + " = "
+                               + 42 * i);
+        
+    }
+}
+    }
+}
+
+output :
+42 * 1 = 42
+42 * 2 = 84
+42 * 3 = 126
+42 * 4 = 168
+42 * 5 = 210
+42 * 6 = 252
+42 * 7 = 294
+42 * 8 = 336
+42 * 9 = 378
+42 * 10 = 420
+
+
+5. public class PrintAlphabets {
+    public static void main(String[] args) {
+         
+        System.out.println("Uppercase alphabets:");
+        for (char ch = 'A'; ch <= 'Z'; ++ch) {
+            System.out.print(ch + " ");
+        }
+
+        
+        System.out.println("\nLowercase alphabets:");
+        for (char ch = 'a'; ch <= 'z'; ++ch) {
+            System.out.print(ch + " ");
+        }
+    }
+}
+
+
+output: Uppercase alphabets:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+Lowercase alphabets:
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+
+
+4.
+public class BreakLoop {
+    public static void main(String[] args) {
+        for (int i = 1; i < 20; i++) {
+            if (i == 15) {
+                break;
+            }
+            System.out.println(i);
+        }
+    }
+}
+}
+
+output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14

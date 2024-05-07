@@ -1,0 +1,85 @@
+1. package basic;
+
+public class lab {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		    byte b = 5;
+	        short s = 10;
+	        int i = 32;
+	        long l = 21;
+	        
+	        float f1 = b;
+	        float f2 = s;
+	        float f3 = i;
+	        float f4 = l;
+	        
+           float a  = (float)f1;
+		    System.out.println(a);
+		    
+		    float x = (float)f2;
+		    System.out.println(x);
+		    
+		    float y = (float)f3;
+		    System.out.println(y);
+		
+		    float n = (float)f4;
+		    System.out.println(n);
+		
+	     
+	        double h = (double)b;
+		    System.out.println(b);
+		    
+
+	        double w = (double)s;
+		    System.out.println(w);
+		    
+		    double u = (double)i;
+		    System.out.println(u);
+		    
+		    double v = (double)l;
+		    System.out.println(v);
+
+}
+}
+o/p :
+5.0
+10.0
+32.0
+21.0
+5
+10.0
+32.0
+21.0
+
+
+2.                  char ch = 'u';
+		    
+		    int m = ch;
+		    System.out.println(m);
+		    
+		    float f = ch;
+		    System.out.println(f);
+		    
+	}
+
+}
+
+o/p :
+117
+117.0
+
+
+
+
+3. for (char ch = 'A'; ch <= 'Z'; ++ch) 
+	            System.out.print(ch + " ");
+		    
+		    for (char ch = 'a'; ch <= 'z'; ++ch) 
+	            System.out.print(ch + " ");
+		    
+
+o/p :  
+
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z

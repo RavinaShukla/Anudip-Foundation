@@ -1,0 +1,335 @@
+Q.1. Create a class called circle . It contains: Two instance variables: radius (of the type double) and color (of the type String).One public methods: getArea(),simple Constructor  with default value of 1.0 and "red", and parameterized constructor.
+
+package Projectclass;
+
+public class Circle 
+
+{
+
+	double radius;
+
+	 String color;
+
+	public void getArea() 
+		{
+		double radius=1.0,pi=3.14,area;
+
+		area=2*pi*radius;
+
+		System.out.println("radius:"+radius);
+
+		System.out.println("Area of circle:" +area);
+		}
+
+		public void Circle() 
+		{
+
+		radius=6.0;
+		
+		color="red";
+		
+		System.out.println("radius:"+radius+"\ncolor:"+color);
+		}	
+
+		public void Circle(double radius,String color) 
+		{
+		System.out.println("radius:" +radius+"\ncolor:" +color);
+		}
+
+	public static void main(String[] args) 
+		{
+		Circle m=new Circle();
+
+		m.Circle();
+
+		m.Circle(2.0, "red");
+
+		m.getArea();
+		}
+}
+
+O/P: 
+
+radius:6.0
+color:red
+radius:2.0
+color:red
+radius:1.0
+Area of circle:6.28
+
+---------------------------------------------------------------------------------------------
+Q.2. Create a class GrandFather with methods name, property , physicalApperance. describe each properties of Grandfather in the class properly in the main method
+    create Father class extending GrandFather and decribe each properties of father deriving from Grandfather(use Override annotation) in the main method 
+create Son class extending Father and decribe each properties of a Son deriving from Father(use Override annotation) in the main method 
+------->
+package Projectclass;
+
+public class Grandfather {
+
+
+public void name () {
+
+	String grandfather = "John ";
+
+	System.out.println("My grand father name is "+grandfather);
+	
+}
+
+public void property () {
+
+	String grandfather = " property in Goa ";
+
+	System.out.println("My grand father has  "+grandfather);
+
+}
+
+public void physicalApperance () {
+
+	double h=5.5;
+
+	String color ="Vannila Ice ";
+
+	double w=68;
+
+
+	System.out.println("My grand father height "+h);
+
+	System.out.println("My grand father has skin tone  "+color );
+
+	System.out.println("My grand father weight "+w);
+
+	}
+
+	public static void main(String[] args) 
+	{
+
+		Grandfather  a = new Grandfather  ();
+
+		a.name();
+
+		a.property();
+
+		a.physicalApperance();
+
+	}
+
+}
+
+package Projectclass;
+
+public class Father extends  Grandfather {
+
+	@Override
+
+	public void name () 
+	{
+
+		String grandfather = "Alex john D'mello";
+
+		System.out.println("My father name is "+grandfather);
+
+	}
+
+	@Override
+
+	public void property () 
+	{
+
+		String grandfather=" property in Mumbai ";
+
+		System.out.println("My father has  "+grandfather);
+
+	}	
+	
+	@Override
+	public void physicalApperance () 
+	{
+
+		double h=5.5;
+
+		String color ="white";
+
+		double w=70;
+
+		System.out.println("My father   height "+h);
+
+		System.out.println("My father has skin tone  "+color );
+
+		System.out.println("My father weight "+w);
+
+		}
+
+
+
+	public static void main(String[] args) 
+	{
+		Father  a = new Father  ();
+
+		a.name();
+
+		a.property();
+
+		a.physicalApperance();
+
+	}
+
+}
+
+package Projectclass;
+
+public class Son extends  Father {
+
+	@Override
+
+	public void name () 
+	{
+
+		String Son= "roland alex D'mello";
+
+		System.out.println("My Son name is "+Son);
+
+	}
+
+	@Override
+
+	public void property () 
+	{
+
+		String Son="Has no property in Mumbai ";
+
+		System.out.println("My Son has  "+Son);
+
+	}	
+	
+	@Override
+	public void physicalApperance () 
+	{
+
+		double h=5.7;
+
+		String color ="white";
+
+		double w=60;
+
+		System.out.println("My Son's height "+h);
+
+		System.out.println("My Son has skin tone  "+color );
+
+		System.out.println("My Son's weight "+w);
+
+		}
+
+
+
+	public static void main(String[] args) 
+	{
+		Son  a = new Son();
+
+		a.name();
+
+		a.property();
+
+		a.physicalApperance();
+
+	}
+
+}
+O/P :
+
+My grand father name is John 
+My grand father has   property in Goa
+My grand father height 5.5
+My grand father has skin tone  Vannila Ice 
+My grand father weight 68.0
+
+My father name is Alex john D'mello
+My father has   property in Mumbai
+My father   height 5.5
+My father has skin tone  white
+My father weight 70.0
+
+My Son name is roland alex D'mello
+My Son has  Has no property in Mumbai
+My Son's height 5.7
+My Son has skin tone  white
+My Son's weight 60.0
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Q.3. Demonstrate the example of Single, hierarchical inheritance using shapes as a base class.
+
+package Projectclass;
+
+public class Shape1 
+{
+	public void details(String color) 
+	{
+        System.out.println("Color: " +color);
+        System.out.print("Shape1: Circle");
+    }
+
+	public static void main(String[] args) 
+	{
+		Shape1 shape=new Shape1();
+		shape.details(null);
+	}
+}
+
+package Projectclass;
+
+public class Rectangle1 extends Shape1
+{
+	@Override
+	public void details(String color) 
+	{
+		double height=10,width=20;
+		 super.details(color);
+	        System.out.print("Rectangle \nHeight: " + height+"\nWidth: " + width +"\nArea: "+width*height);
+	}
+
+	public static void main(String[] args) 
+	{
+		
+		Rectangle1 rect=new Rectangle1();
+		rect.details("Blue");
+	}
+
+}
+
+package Projectclass;
+
+public class square extends Shape1
+{
+	@Override
+	public void details(String color) 
+	{
+		double side = 10;
+		 super.details(color);
+	        System.out.println("Square \nside of square: " + side+"\nArea: "+side*side);
+	}
+	public static void main(String[] args) {
+		
+		square sq = new square();
+		sq.details("Pink");
+
+	}
+}
+
+O/P:
+Color: null
+Shape1: Circle
+
+Color: Blue
+Shape1: Circle Rectangle 
+Height: 10.0
+Width: 20.0
+Area: 200.0
+
+Color: Green
+Shape1: Circle Square 
+square: 10.0
+Area: 100.0
+
+--------------------------------------------------------------------------------------------------------------------
